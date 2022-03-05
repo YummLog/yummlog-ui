@@ -6,10 +6,16 @@ const AppBarSx = {
   p: '1em',
 };
 
+const titleSx = {
+  color: '#fff',
+};
+
 const Header = () => {
   return (
     <MuiAppBar color="primary" sx={AppBarSx}>
-      <Typography component="p">Yumm Log</Typography>
+      <Typography component="p" sx={titleSx}>
+        Yumm Log
+      </Typography>
     </MuiAppBar>
   );
 };
