@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack serve --port 3000 --mode development --open --hot",
     "build": "webpack --mode production",
-    "lint": "eslint . --ext js,ts"
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx --fix"
   },
   "keywords": [],
   "author": "",
@@ -52,7 +52,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "npm run lint -- --fix"
+      "npm run lint",
+      "git commit"
     ],
     "*.{js,json,css,md}": [
       "prettier --write"
