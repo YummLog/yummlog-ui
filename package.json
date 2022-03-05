@@ -53,7 +53,7 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "npm run lint",
-      "git commit"
+      "git add"
     ],
     "*.{js,json,css,md}": [
       "prettier --write"
