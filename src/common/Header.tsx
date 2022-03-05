@@ -1,4 +1,4 @@
-import { AppBar as MuiAppBar, Box, Typography } from '@mui/material';
+import { AppBar as MuiAppBar, Typography } from '@mui/material';
 
 const AppBarSx = {
   height: '4.375em',

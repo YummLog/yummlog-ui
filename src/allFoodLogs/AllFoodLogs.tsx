@@ -1,5 +1,7 @@
+import { Typography } from '@mui/material';
+
 const AllFoodLogs = () => {
-  return <p>AllFoodLogs</p>;
+  return <Typography component="p">Restaurent Logs</Typography>;
 };
 
 export default AllFoodLogs;
