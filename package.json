@@ -47,7 +47,7 @@
     "webpack-dev-server": "4.7.4"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
+    "*.{ts,tsx,js,jsx,md,html}":[
       "eslint --cache --fix"
     ]
   }
