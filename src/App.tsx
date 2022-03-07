@@ -1,19 +1,26 @@
 import { Routes, Route, MemoryRouter as Router } from 'react-router-dom';
-import AllFoodLogs from './allFoodLogs/AllFoodLogs';
-import Providers from './context';
+import { ThemeProvider } from '@mui/material/styles';
+import AllFoodPosts from './allFoodPosts/AllFoodPosts';
 import Container from './styles/Container';
+import { ApiProvider } from './api/axiosInstance';
+import theme from './styles/theme';
+import { AllFoodPostsProvider } from './allFoodPosts/allFoodPostsContext';
 
 const App = () => {
   return (
-    <Providers>
+    <ThemeProvider theme={theme}>
       <Container>
-        <Router>
-          <Routes>
-            <Route path="/" element={<AllFoodLogs />} />
-          </Routes>
-        </Router>
+        <ApiProvider>
+          <Router>
+            <AllFoodPostsProvider>
+              <Routes>
+                <Route path="/" element={<AllFoodPosts />} />
+              </Routes>
+            </AllFoodPostsProvider>
+          </Router>
+        </ApiProvider>
       </Container>
-    </Providers>
+    </ThemeProvider>
   );
 };
 export default App;
