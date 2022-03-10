@@ -6,9 +6,13 @@ interface CardProps {
   content: string;
 }
 
+const CardSx = {
+  backgroundColor: 'primary.light',
+};
+
 const Card = ({ title, content }: CardProps) => {
   return (
-    <MuiCard>
+    <MuiCard sx={CardSx}>
       <CardContent>
         <Heading type="h5" text={title} />
         <Typography>{content}</Typography>

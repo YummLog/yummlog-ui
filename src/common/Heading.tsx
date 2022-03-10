@@ -21,13 +21,14 @@ const returnSX = (headerType: string) => {
       return {
         fontSize: '2rem',
         fontWeight: 500,
-        my: '0.5em',
+        my: '0.2em',
+        color: '#fff',
       };
     case 'h4':
       return {
         fontSize: '1.75rem',
         lineHeight: '1',
-        my: '0.5em',
+        my: '0.7em',
       };
     case 'h5':
       return {

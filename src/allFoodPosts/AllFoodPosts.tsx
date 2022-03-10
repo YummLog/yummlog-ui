@@ -1,7 +1,11 @@
+import { Box } from '@mui/material';
 import { useEffect } from 'react';
 import Card from '../common/Card';
-import Heading from '../common/Heading';
 import { useAllFoodPosts } from './allFoodPostsContext';
+
+const BoxSx = {
+  my: '1em',
+};
 
 const AllFoodPosts = () => {
   const { allFoodPosts, getAllFoodPosts } = useAllFoodPosts();
@@ -17,12 +21,11 @@ const AllFoodPosts = () => {
   }
 
   return (
-    <>
-      <Heading type="h4" text={'Restaurent logs'} />
+    <Box sx={BoxSx}>
       {allFoodPosts.map((log) => (
         <Card title={log.name} content={`${log.city} ${log.state}`} key={log.id} />
       ))}
-    </>
+    </Box>
   );
 };
 
