@@ -14,7 +14,7 @@ export interface FoodItem {
 
 export interface FoodPost {
   id: string;
-  name: string;
+  restaurantName: string;
   date: string;
   address: string;
   city: string;

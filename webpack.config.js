@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 new Dotenv();
+
 module.exports = {
   entry: './src/index.tsx',
   output: {

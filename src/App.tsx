@@ -19,7 +19,7 @@ const App = () => {
             <NavTabs />
             <AllFoodPostsProvider>
               <Routes>
-                <Route path="/" element={<AllFoodPosts />} />
+                <Route path="/" element={<CreateFoodPosts />} />
                 <Route path="/create-food-posts" element={<CreateFoodPosts />} />
               </Routes>
             </AllFoodPostsProvider>

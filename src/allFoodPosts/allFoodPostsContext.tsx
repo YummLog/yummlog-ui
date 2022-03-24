@@ -7,7 +7,7 @@ const PAGE_LIMIT = 20;
 const restaurantLogs: FoodPost[] = [
   {
     id: '1',
-    name: 'Matteo Italian dinning services',
+    restaurantName: 'Matteo Italian dinning services',
     address: '569 Main st',
     city: 'Hoboken',
     state: 'New Jersey',
@@ -34,8 +34,6 @@ const restaurantLogs: FoodPost[] = [
   },
 ];
 
-const total = 100;
-
 const AllFoodPostsContext = createContext<AllFoodPostsContextValue | null>(null);
 AllFoodPostsContext.displayName = 'AllFoodPostsContext';
 
@@ -48,15 +46,13 @@ export const AllFoodPostsProvider = (props: OptionalProviderProps<AllFoodPostsCo
 
   const getAllFoodPosts = useCallback(async () => {
     try {
-      const data: FoodPostsResponse = await apiContext.get(`/foodpost`);
+      const { data } = await apiContext.get(`/foodpost`);
       console.log(data, 'data');
-      // setAllFoodPosts([...allFoodPosts, dummyData.foodPosts]);
+      setAllFoodPosts(data.foodPosts);
+      setTotal(total);
+      setPage(page);
     } catch (error) {
       console.error(error);
-    } finally {
-      setAllFoodPosts(restaurantLogs);
-      setTotal(total);
-      setPage(page + PAGE_LIMIT);
     }
   }, [allFoodPosts, setAllFoodPosts]);
 

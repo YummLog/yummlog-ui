@@ -23,7 +23,7 @@ const AllFoodPosts = () => {
   return (
     <Box sx={BoxSx}>
       {allFoodPosts.map((log) => (
-        <Card title={log.name} content={`${log.city} ${log.state}`} key={log.id} />
+        <Card title={log.restaurantName} content={`${log.city} ${log.state}`} key={log.id} />
       ))}
     </Box>
   );
